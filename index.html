@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Simple Calculator</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" />
+
+    <script>
+        $(document).ready(function () { });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="header-wraper">
+            <div class="collapse bg-dark" id="navbarHeader">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-8 col-md-7 py-4">
+                            <h4 class="text-white fs-2">About</h4>
+                            <p class="text-muted">Concept project of a simple responsive calculator.</p>
+                        </div>
+                        <div class="col-xs-4 offset-md-1 py-4">
+                            <h4 class="text-white">Contact</h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                                <li><a href="#" class="text-white">Like on Facebook</a></li>
+                                <li><a href="#" class="text-white">Email me</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar navbar-dark bg-dark shadow-xs navheader">
+                <div class="container">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5zm0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zM7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5h-1z"/>
+                          </svg>
+                        <strong class="fs-2">Simple Calculator</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="calc-container d-flex flex-column justify-content-between">
+            <div class="screen d-flex justify-content-center">
+                <input type="text" class="result align-self-center border-0"/>
+            </div>
+            <div class="keypad d-flex flex-column justify-content-start">
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" id="clear-button" value="AC">AC</button>
+                    <button class="btn btn-dark btn-square-md operator" value="&radic;">&radic;</button>
+                    <button class="btn btn-dark btn-square-md operator" value="()">()</button>
+                    <button class="btn btn-dark btn-square-md operator" value="^">^</button>
+                </div>
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" value="7">7</button>
+                    <button class="btn btn-dark btn-square-md" value="8">8</button>
+                    <button class="btn btn-dark btn-square-md" value="9">9</button>
+                    <button class="btn btn-dark btn-square-md operator" value="&divide;">&divide;</button>
+                </div>
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" value="4">4</button>
+                    <button class="btn btn-dark btn-square-md" value="5">5</button>
+                    <button class="btn btn-dark btn-square-md" value="6">6</button>
+                    <button class="btn btn-dark btn-square-md operator" value="&times;">&times;</button>
+                </div>
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" value="1">1</button>
+                    <button class="btn btn-dark btn-square-md" value="2">2</button>
+                    <button class="btn btn-dark btn-square-md" value="3">3</button>
+                    <button class="btn btn-dark btn-square-md operator" value="-">-</button>
+                </div>
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" value="0">0</button>
+                    <button class="btn btn-dark btn-square-md" value=".">,</button>
+                    <button class="btn btn-dark btn-square-md" value="del">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+                            <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+                            <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+                        </svg>
+                    </button>
+                    <button class="btn btn-dark btn-square-md operator" value="+">+</button>
+                </div>
+                <div class="row d-flex flex-row justify-content-between">
+                    <button class="btn btn-dark btn-square-md" id="equal" style="width: 100%;" value="=">=</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
+
