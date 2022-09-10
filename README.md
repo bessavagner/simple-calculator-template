@@ -16,4 +16,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Acknowledgments
 
-The header styles is from [Bootstrap example - Album](https://getbootstrap.com/docs/5.2/examples/album/).
+The header style comes from [Bootstrap example - Album](https://getbootstrap.com/docs/5.2/examples/album/).
